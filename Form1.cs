@@ -73,7 +73,7 @@ namespace BiblioRenamer
                     else
                         outPath = Path.GetDirectoryName(filename);
                     outPath += Path.DirectorySeparatorChar + listBox1.Items[idx].ToString() + ext;
-                    MessageBox.Show(outPath);
+                    //MessageBox.Show(outPath);
                     if(File.Exists(outPath))
                     {
                         MessageBox.Show(outPath + "\r\nalready exists, so nothing was done.");
@@ -172,7 +172,7 @@ namespace BiblioRenamer
                     switch(type)
                     {
                         case "T1":
-                            title = Regex.Replace(value, @"[^\w]+", " ");
+                            title = Regex.Replace(value, @"[^\w']+", " ");
                             canuse = true;
                             break;
                         case "YR":
